@@ -41,7 +41,7 @@
     });
 })(jQuery); // End of use strict
 
-fetch('https://ctxkajgarj.execute-api.us-east-1.amazonaws.com/PROD/visitcount')
+fetch('https://51p6xywcic.execute-api.us-east-1.amazonaws.com/Prod/visitCount')
     // Handle success
     .then(response => response.json())  // convert to json
     .then(json => document.getElementById('numVistor').innerHTML = json.vistorCount.toString())  //update the count
