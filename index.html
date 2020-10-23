@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#self_taught">Self-Taught</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                 </ul>
             </div>
@@ -62,6 +62,68 @@
                         <a class="social-icon" href="https://www.linkedin.com/in/huy-nhat/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://twitter.com/_huyNhat" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a class="social-icon" href="https://github.com/huyNhat" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Cloud Personal Site</h3>
+                            <div class="subheading mb-3">Oct 2020</div>
+                            <p>As mentioned above this was the end product of the Cloud Resume Challenge which asked to build a serverless cloud infrastructure with CI/CD pipline:</p>
+                            <ul class="fa-ul mb-0">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Front-End: Built off of the
+                                    <a href="https://github.com/StartBootstrap/startbootstrap-resume" target="_blank">Start Bootstrap Resume template</a>
+                                    deployed in S3. The site is using a free custom domain from Freenom, registered with Route53, SSL through Amazon Certifcate Manager, and Cloudfront. Changes are automatically pushed to Github, S3 and invalidate Cloudfront cache with using Github Actions from a written YAML template.
+                                </li>
+                                <br />
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Back-End: Started off with AWS SAM CLI: I wrote a template in YAML to deploy a Lambda function (written in Python with boto3-AWS SDK), a DynamoDB table, and API Gateway. The API (REST) role was to update the back end database and served as an endpoint to provide the visitor count to the front end. Lastly, I again used GitHub Actions to build my SAM application and deploy to AWS when there's a push in my master branch.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Smart Display with Raspberry Pi</h3>
+                            <div class="subheading mb-3">June 2020</div>
+                            <p>Turned an monitor to a smart diplay that would display European League matches' score in real time, plus it also tells current time, weather forcast, covid cases, etc</p>
+                            <p>
+                                Check out its screenshot
+                                <a href="https://imgur.com/a/LlPvstM" target="_blank">HERE.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Mobile Apps | Android</h3>
+                            <div class="subheading mb-3">2018-2019</div>
+                            <ul class="fa-ul mb-0">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Get Text: Textbooks Marketplace App
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Lynk: Community-based App
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Snooze It: Utility app
+                                </li>
+                            </ul>
+                            <p>
+                                More details can found at
+                                <a href="https://huynhat.github.io/#portfolio" target="_blank">my old site.</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -130,68 +192,6 @@
                     <br />
                     <a href="https://www.youracclaim.com/badges/6ab550e0-c558-4c4e-a05d-068f79f8eb3e" target="_blank"><img src="https://images.youracclaim.com/size/160x160/images/ee0a9da0-1627-4031-a455-8ced6b866cc7/AWS-SysOpAdmin-Associate.png" /></a>
                     <a href="https://www.youracclaim.com/badges/da168787-8248-4abe-8601-185c8e3962cf" target="_blank"><img src="https://images.youracclaim.com/size/160x160/images/1fdcf6a9-de8e-4e35-96b0-e801d8411506/AWS-CloudPractitioner.png" /></a>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Projects-->
-            <section class="resume-section" id="projects">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Cloud Personal Site</h3>
-                            <div class="subheading mb-3">Oct 2020</div>
-                            <p>As mentioned above this was the end product of the Cloud Resume Challenge which asked to build a serverless cloud infrastructure with CI/CD pipline:</p>
-                            <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-square"></i></span>
-                                    Front-End: Built off of the
-                                    <a href="https://github.com/StartBootstrap/startbootstrap-resume" target="_blank">Start Bootstrap Resume template</a>
-                                    deployed in S3. The site is using a free custom domain from Freenom, registered with Route53, SSL through Amazon Certifcate Manager, and Cloudfront. Changes are automatically pushed to Github, S3 and invalidate Cloudfront cache with using Github Actions from a written YAML template.
-                                </li>
-                                <br />
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-square"></i></span>
-                                    Back-End: Started off with AWS SAM CLI: wrote a template in YAML to deploy a Lambda function (written in Python), a DynamoDB table, and API Gateway. The API (REST) role was to update the back end database and served as an endpoint to provide the visitor count to the front end. Lastly, I again used GitHub Actions to build my SAM application and deploy to AWS when there's a push in my master branch.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Smart Display with Raspberry Pi</h3>
-                            <div class="subheading mb-3">June 2020</div>
-                            <p>Turned an monitor to a smart diplay that would display European League matches' score in real time, plus it also tells current time, weather forcast, covid cases, etc</p>
-                            <p>
-                                Check out its screenshot
-                                <a href="https://imgur.com/a/LlPvstM" target="_blank">HERE.</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Mobile Apps | Android</h3>
-                            <div class="subheading mb-3">2018-2019</div>
-                            <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-square"></i></span>
-                                    Get Text: Textbooks Marketplace App
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-square"></i></span>
-                                    Lynk: Community-based App
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-square"></i></span>
-                                    Snooze It: Utility app
-                                </li>
-                            </ul>
-                            <p>
-                                More details can found at
-                                <a href="https://huynhat.github.io/#portfolio" target="_blank">my old site.</a>
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
             <hr class="m-0" />
