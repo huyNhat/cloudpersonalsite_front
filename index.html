@@ -48,7 +48,11 @@
                         <a href="mailto:nhat.ng1@gmail.com">nhat.ng1@gmail.com</a>
                     </div>
                     <p class="lead mb-5">I am an AWS SysOps certified and an IT professional with strong automation mindset, a passion for root cause analysis and creative solutions to mitigate issues.</p>
-                    <p class="lead mb-5">This site is built to showcase my personal projects and skills. For my work experience, please check out my Linkedin below, and feel free to send a connect invite.</p>
+                    <p class="lead mb-5">
+                        This site is built as part of the
+                        <a href="https://cloudresumechallenge.dev/instructions/" target="_blank">Cloud Resume Challenge</a>
+                        and to solidify my AWS knowledge/skills. For my work experience, please check out my Linkedin below, and feel free to send a connect invite.
+                    </p>
                     <p class="lead mb-5">
                         And by the way, this site has been visited
                         <span id="numVistor">...</span>
@@ -57,7 +61,7 @@
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/huy-nhat/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://twitter.com/_huyNhat" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="https://github.com/huyNhat" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://github.com/huyNhat" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </section>
@@ -113,7 +117,7 @@
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-square"></i></span>
-                            Infrastructure-as-Code: Cloud Formation, Terraform (WIP)
+                            Infrastructure-as-Code: Cloud Formation, AWS SAM CLI, Terraform (WIP)
                         </li>
                     </ul>
                 </div>
@@ -135,9 +139,22 @@
                     <h2 class="mb-5">Projects</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Cloud Serverless Personal Site</h3>
+                            <h3 class="mb-0">Cloud Personal Site</h3>
                             <div class="subheading mb-3">Oct 2020</div>
-                            <p>Re building my personal site. Main purpose is to solidify my understand how AWS works as a whole. I'm going to list all AWS services used here once done.</p>
+                            <p>As mentioned above this was the end product of the Cloud Resume Challenge which asked to build a serverless cloud infrastructure with CI/CD pipline:</p>
+                            <ul class="fa-ul mb-0">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Front-End: Built off of the
+                                    <a href="https://github.com/StartBootstrap/startbootstrap-resume" target="_blank">Start Bootstrap Resume template</a>
+                                    deployed in S3. The site is using a free custom domain from Freenom, registered with Route53, SSL through Amazon Certifcate Manager, and Cloudfront. Changes are automatically pushed to Github, S3 and invalidate Cloudfront cache with using Github Actions from a written YAML template.
+                                </li>
+                                <br />
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-square"></i></span>
+                                    Back-End: Started off with AWS SAM CLI: wrote a template in YAML to deploy a Lambda function (written in Python), a DynamoDB table, and API Gateway. The API (REST) role was to update the back end database and served as an endpoint to provide the visitor count to the front end. Lastly, I again used GitHub Actions to build my SAM application and deploy to AWS when there's a push in my master branch.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
